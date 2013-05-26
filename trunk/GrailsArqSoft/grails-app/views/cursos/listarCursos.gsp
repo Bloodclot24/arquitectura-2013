@@ -14,12 +14,14 @@
 		<td>Vacantes</td>
 		<td>Docentes</td>
 		<td>Horarios</td>
+		<td>Materia</td>
 	</tr>
-	<g:each in="${todasLasMaterias}" status="i" var="materia">
+	<g:each in="${todosLosCursos}" status="i" var="curso">
 		<tr>
-			<td>${materia.departamento}.${materia.codigo}</td>
-			<td>${materia.nombre}</td>
-			<td>Cursos</td>
+			<td>${curso.vacantes}</td>
+			<td>${curso.docentes}</td>
+			<td>${curso.horarios}</td>
+			<td>${curso.materia.nombre}</td>
 		</tr>
 	</g:each>
 </table>

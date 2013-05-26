@@ -8,8 +8,8 @@ class CursosController {
 	
 	def listarCursos = {
 		//listar todos los cursos
-		def todasLosCursos = Cursos.list()
-		[todasLosCursos : todasLosCursos]
+		def todosLosCursos = Cursos.list()
+		[todosLosCursos : todosLosCursos]
 	}
 	
 	def listarCursosMateria = {
