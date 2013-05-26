@@ -8,6 +8,10 @@ class CursosController {
 		redirect (action: list)
 	}
 	
+	String toString() {
+		"Cursos"
+	}
+	
 	/*
 	def listarCursos = {
 		//listar todos los cursos
