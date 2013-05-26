@@ -2,10 +2,13 @@ package grailsarqsoft
 
 class CursosController {
 
+	def scaffold = true
+	
     def index = { 
-		redirect (action: listarCursos)
+		redirect (action: list)
 	}
 	
+	/*
 	def listarCursos = {
 		//listar todos los cursos
 		def todosLosCursos = Cursos.list()
@@ -20,4 +23,5 @@ class CursosController {
 	def detalleCurso = {
 		
 	}
+	*/
 }
