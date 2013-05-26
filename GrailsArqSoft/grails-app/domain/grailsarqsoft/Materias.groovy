@@ -3,9 +3,15 @@ package grailsarqsoft
 class Materias {
 
 	String 	nombre
-	int		departamento
-	int		codigo
+	String	codigo
+	static hasMany = [cursos: Cursos]
 	
     static constraints = {
+		codigo()
+		nombre()
     }
+	
+	String toString() {
+		"${codigo} - ${nombre}"
+	}
 }

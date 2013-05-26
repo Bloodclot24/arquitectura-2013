@@ -5,8 +5,15 @@ class Cursos {
 	String 	docentes
 	String 	horarios
 	int 	vacantes
-	Materias materia
+	static belongsTo = [materia : Materias]
 	
     static constraints = {
+		vacantes()
+		docentes()
+		horarios()
     }
+	
+	String toString() {
+		"${docentes}"
+	}
 }
