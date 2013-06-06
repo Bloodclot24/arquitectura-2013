@@ -1,11 +1,11 @@
 package grailsarqsoft
 
-class Cursos {
+class Curso {
 
 	String 	docentes
 	String 	horarios
 	int 	vacantes
-	static belongsTo = [materia : Materias]
+	static belongsTo = [materia : Materia]
 	
     static constraints = {
 		vacantes()

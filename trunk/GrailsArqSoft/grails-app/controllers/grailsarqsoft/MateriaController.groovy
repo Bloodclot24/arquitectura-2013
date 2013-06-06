@@ -1,6 +1,6 @@
 package grailsarqsoft
 
-class MateriasController {
+class MateriaController {
 
 	def scaffold = true
 	
