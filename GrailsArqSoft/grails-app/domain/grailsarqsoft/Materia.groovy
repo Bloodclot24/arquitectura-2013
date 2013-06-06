@@ -1,10 +1,10 @@
 package grailsarqsoft
 
-class Materias {
+class Materia {
 
 	String 	nombre
 	String	codigo
-	static hasMany = [cursos: Cursos]
+	static hasMany = [cursos: Curso]
 	
     static constraints = {
 		codigo()

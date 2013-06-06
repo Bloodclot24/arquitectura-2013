@@ -1,6 +1,6 @@
 package grailsarqsoft
 
-class CursosController {
+class CursoController {
 
 	def scaffold = true
 	
