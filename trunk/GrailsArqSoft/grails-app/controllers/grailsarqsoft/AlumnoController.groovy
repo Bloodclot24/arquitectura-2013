@@ -19,11 +19,12 @@ class AlumnoController {
 		if(user){
 			session.user = user
 			flash.message = "Bienvenido ${user.nombre} + ${user.apellido}!"
-			redirect(action:"login")
+			redirect(url: request.header('referer'))
 			
 		}else{
 			flash.message = "Lo sentimos, ${params.padron}. Intenta nuevamente."
-			redirect(action:"login")
+			redirect(url: request.header('referer'))
+			
 		}
 	}
 	

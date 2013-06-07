@@ -9,9 +9,9 @@ class Curso {
 	static hasMany 		= [inscriptos: Inscripcion]
 	
     static constraints = {
-		vacantes ()
 		docentes blank: false
 		horarios ()
+		vacantes ()
     }
 	
 	String toString() {
