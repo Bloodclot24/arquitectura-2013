@@ -19,7 +19,9 @@ class AlumnoController {
 		if(user){
 			session.user = user
 			flash.message = "Bienvenido ${user.nombre} + ${user.apellido}!"
-			redirect(url: request.header('referer'))
+			def targetUri = params.targetUri ?: "/"
+			redirect(uri: targetUri)
+			//redirect(url: request.header('referer'))
 			
 		}else{
 			flash.message = "Lo sentimos, ${params.padron}. Intenta nuevamente."

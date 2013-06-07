@@ -45,7 +45,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="buttons">
-                    <g:submitButton name="login" class="save" value="Login" />
+                    <g:submitButton name="login" class="save" value="Login"  params="[targetUri: (request.forwardURI - request.contextPath)]" />
                 </fieldset>
             </g:form>
         </div>
