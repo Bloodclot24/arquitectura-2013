@@ -34,6 +34,15 @@
 			
 				<g:if test="${inscripcionInstance?.curso}">
 				<li class="fieldcontain">
+					<span id="materia-label" class="property-label"><g:message code="inscripcion.curso.materia.label" default="Materia" /></span>
+					
+						<span class="property-value" aria-labelledby=""materia-label""><g:link controller="materia" action="show" id="${inscripcionInstance?.curso?.materia?.id}">${inscripcionInstance?.curso?.materia?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+				
+				<g:if test="${inscripcionInstance?.curso}">
+				<li class="fieldcontain">
 					<span id="curso-label" class="property-label"><g:message code="inscripcion.curso.label" default="Curso" /></span>
 					
 						<span class="property-value" aria-labelledby="curso-label"><g:link controller="curso" action="show" id="${inscripcionInstance?.curso?.id}">${inscripcionInstance?.curso?.encodeAsHTML()}</g:link></span>

@@ -7,8 +7,9 @@
 		<g:message code="inscripcion.alumno.label" default="Alumno" />
 		<span class="required-indicator">*</span>
 	</label>
-	<!-- el alumno se selecciona mediante el login y no se deberia poder modificar -->
-	<g:select id="alumno" name="alumno.id" from="${grailsarqsoft.Alumno.list()}" optionKey="id" required="" readonly="true" value="${inscripcionInstance?.alumno?.id}" class="many-to-one"/>
+	<%--  el alumno se selecciona mediante el login y no se deberia poder modificar --%>
+	<g:select id="alumno" name="alumno.id" from="${grailsarqsoft.Alumno.findById(inscripcionInstance?.alumno?.id)}" optionKey="id" required="" readonly="readonly" value="${inscripcionInstance?.alumno?.id}" class="many-to-one"/>
+	
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: inscripcionInstance, field: 'curso', 'error')} required">
